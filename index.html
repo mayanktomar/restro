@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restro</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Restro</a>
+    </div>
+  </nav>
+  
+  <div class="introduction">
+    <div>
+      
+      <!-- <p id="intropara">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus hic rem unde fugiat quam omnis eum ut sapiente ipsum nisi cumque, adipisci nulla, error enim tenetur quod vero fugit eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quis consequuntur harum eligendi nihil, autem at doloremque eveniet accusantium reprehenderit alias fugiat, asperiores dicta blanditiis tempore, cumque amet! Numquam, laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias suscipit molestias fuga ad, vitae distinctio harum iste eveniet similique, eos aspernatur maxime dignissimos ea illum exercitationem voluptas obcaecati necessitatibus aperiam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, minus repellendus obcaecati animi veritatis quas. Voluptates modi dignissimos, esse, illo labore provident aliquam expedita eum accusantium nostrum perspiciatis reiciendis sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit repellat sit eligendi eveniet modi, dicta dolore esse officia et error hic quia, blanditiis harum, aut consectetur fuga provident fugiat! Voluptate Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quae at necessitatibus earum id reiciendis repellat nemo atque nesciunt dolor? Quibusdam, aspernatur quia. Neque provident beatae deleniti exercitationem quaerat est? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis mollitia dolore quaerat ex cupiditate in rem vitae accusantium inventore praesentium nemo, tenetur deleniti veniam porro dolo</p> -->
+      <p id="intropara">This is a test paragraph</p>
+      <button onclick="changeContent()">Click me</button>
+      <button onclick="changeStyle()">Change style</button>
+    </div>
+
+    <div>
+      <img src="./images/intro.jpg" alt="restaurant image" id="introimage">
+    </div>
+  </div>
+
+  <div id="dynamicdiv">
+    <button onclick="toggleContent()">Toggle</button>
+  </div>
+  <div class="container topdishes">
+    <h2>Top Dishes</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="./images/dish1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Dish1</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="https://www.google.com" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="./images/dish2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="./images/dish3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <form id="myForm" onsubmit="formValues(event)">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" onchange="trackValues(event)"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" onchange="trackValues(event)"><br><br>
+    <input type="submit" value="Submit">
+  </form> 
+
+  <!-- <button id="chat">Chat</button> -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Order</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+          
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

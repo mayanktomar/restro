@@ -1,0 +1,27 @@
+h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+
+
+.introduction {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  column-gap: 5px;
+}
+
+.topdishes {
+  text-align: center;
+}
+
+.row {
+  margin-top: 5px;
+}
+
+#chat {
+  position: fixed;
+  right: 0px;
+}
+
