@@ -59,6 +59,136 @@ function trackValues(event) {
   console.log(value);
 }
 
+document.getElementById('intropara').addEventListener('',testFunction);
+
+function testFunction () {
+  console.log("hello");
+}
+
+document.getElementById('tempbutton').addEventListener('click',testFunction);
+
+
+let a = [1,3,6,7,4,9];
+
+var sum=0;
+for (let i=0;i<a.length;i++) {
+  sum=sum+a[i];
+}
+
+console.log(sum);
+
+
+function test1(acc,curr) {
+  acc=acc+curr;
+  return acc;
+}
+console.log(a.reduce(test1,0));
+
+class Student {
+  constructor(name,age,email) {
+    this.name = name;
+    this.age = age;
+    this.email = email;
+  } 
+
+  displayDetails() {
+    console.log("name: ",this.name,"age: ",this.age,"email: ",this.email);
+  }
+
+}
+
+let obj1 = new Student("Mayank",100,"mayank@gmail.com");
+let obj2 = new Student("Ashutosh",25,"ashutosh@gmail.com");
+let obj3 = new Student("Yogilesh",27,"yogilesh@gmail.com");
+
+obj1.displayDetails();
+obj2.displayDetails();
+obj3.displayDetails();
+
+
+let arr = [
+  {
+    name:"Yogilesh",
+    age:25,
+    email:"y@gmail.com"
+  },
+  {
+    name:"def",
+    age:25,
+    email:"y@gmail.com"
+  },
+  {
+    name:"abc",
+    age:25,
+    email:"y@gmail.com"
+  }
+
+]
+
+arr[1]["name"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
